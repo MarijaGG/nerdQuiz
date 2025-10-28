@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\QuizController;
 
 // Redirect guests to login, users to dashboard
 Route::get('/', function () {
@@ -21,3 +22,26 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+// Quiz routes
+Route::get('/hsr', function () {
+    return redirect()->route('quiz.show', ['id' => 1]);
+});
+
+Route::get('/gi', function () {
+    return redirect()->route('quiz.show', ['id' => 2]);
+});
+
+Route::get('/dino', function () {
+    return redirect()->route('quiz.show', ['id' => 3]);
+});
+
+Route::get('/fnaf', function () {
+    return redirect()->route('quiz.show', ['id' => 4]);
+});
+
+Route::get('/jojo', function () {
+    return redirect()->route('quiz.show', ['id' => 5]);
+});
+
+Route::match(['get', 'post'], '/quiz/{id}', [QuizController::class, 'show'])->name('quiz.show');
