@@ -12,5 +12,9 @@
         <input type="hidden" name="retake" value="1">
         <button type="submit">Retake Quiz</button>
     </form>
+
+    <form method="GET" action="{{ route('dashboard') }}">
+        <button type="submit">Return To Dashboard</button>
+    </form>
 </body>
 </html>

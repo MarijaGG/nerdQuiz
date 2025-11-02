@@ -20,7 +20,14 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
-        $this->call(HsrQuizSeeder::class);
+        $this->call([
+        QuizSeeder::class,
+        HsrQuizSeeder::class,
+        GenshinQuizSeeder::class,
+        DinoQuizSeeder::class,
+        FnafQuizSeeder::class,
+        JojosQuizSeeder::class,
+    ]);
 
 
     }
