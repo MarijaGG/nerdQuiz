@@ -1,6 +1,6 @@
 <x-app-layout>
 
-    <h1 class="text-2xl font-bold mb-4 text-center">Welcome to NerdQuiz</h1>
+    <h1 class="font-bold my-12 text-center">Welcome to NerdQuiz</h1>
 
     <div class="space-y-2 text-center">
         <a href="/hsr" class="hover:underline">HSR quiz</a> <br>

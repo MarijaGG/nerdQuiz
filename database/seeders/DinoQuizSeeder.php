@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Question;
 
-class DinosaursQuizSeeder extends Seeder
+class DinoQuizSeeder extends Seeder
 {
     public function run(): void
     {
@@ -38,7 +38,7 @@ class DinosaursQuizSeeder extends Seeder
                 'option_b' => 'Ichthyotitan severnesis',
                 'option_c' => 'Pliosaurus macromerus',
                 'option_d' => 'Dakosaurus Maximus',
-                'correct_answer' => 'Pliosaurus macromerus',
+                'correct_answer' => 'Ichthyotitan severnesis',
             ],
             [
                 'quiz_id' => 3,

@@ -12,16 +12,36 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <!-- Scripts -->
+         
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <style>
+                    h1 {
+                        
+                    color: #2b6cb0;
+                    text-shadow: 1px 1px 3px #aee;
+                    font-size: 55px;
+                }
+
+              body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, #e1f8ffff, #80c0ff);
+            background-attachment: fixed; /* Keeps the gradient stable when scrolling */
+            color: #222;
+        }
+
+               a {
+                    font-size: 30px;
+                }
+        </style>
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
+        <div>
             @include('layouts.navigation')
 
             <!-- Page Heading -->
             @isset($header)
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <header>
+                    <div>
                         {{ $header }}
                     </div>
                 </header>

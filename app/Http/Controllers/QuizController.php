@@ -93,8 +93,17 @@ class QuizController extends Controller
 
         $question = Question::find($order[$index]);
 
-        // ✅ Use quiz view that matches your quiz name (genshin, hsr, etc.)
-        return view('quizzes.hsr', [
+        // Use quiz view that matches your quiz name (genshin, hsr, dino, fnaf, jojo)
+        $quizViews = [
+            1 => 'quizzes.hsr',
+            2 => 'quizzes.gi',
+            3 => 'quizzes.dino',
+            4 => 'quizzes.fnaf',
+            5 => 'quizzes.jojo',
+        ];
+        $view = $quizViews[$quiz_id] ?? 'quizzes.hsr';
+
+        return view($view, [
             'question' => $question,
             'index' => $index,
             'total' => $total,
